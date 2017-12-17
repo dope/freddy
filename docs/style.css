@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 13px;
+  color: #000; }
+
+h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.4; }
+  @media screen and (min-width: 40em) {
+    h1 {
+      font-size: 30px;
+      max-width: 650px;
+      line-height: 1.4; } }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+.mt {
+  margin-top: 80px; }
+
+.mb {
+  margin-bottom: 40px; }
+
+.container {
+  max-width: 1380px;
+  width: 90%;
+  margin: 0 auto; }
+
+.header {
+  padding: 70px 0; }
+  .header__link {
+    display: block;
+    max-width: 40px;
+    position: relative; }
+    .header__link:after {
+      position: absolute;
+      right: -35px;
+      top: 0;
+      content: "Beta";
+      font-size: 11px;
+      opacity: 0.5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      font-weight: 700; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 150px;
+  background: yellow;
+  text-decoration: none;
+  border-radius: 100px;
+  background-image: linear-gradient(-135deg, #01AAF2 0%, #1087BA 100%);
+  color: #1087BA;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  position: relative;
+  transition: box-shadow 300ms ease-in-out; }
+  .btn:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: #fff;
+    content: ""; }
+  .btn:hover {
+    box-shadow: 0 0 35px 0px #ade2f8; }
+  .btn > * {
+    position: relative;
+    z-index: 10; }
+  .btn path {
+    fill: #1087BA; }
+  .btn span {
+    margin-left: 10px; }
+
+.footer {
+  padding: 40px 0;
+  font-size: 14px; }
+  .footer a {
+    text-decoration: none;
+    color: #000; }
+
+/*# sourceMappingURL=style.css.map */
