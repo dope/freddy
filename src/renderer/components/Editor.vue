@@ -11,7 +11,6 @@
 </template>
 
 <script>
-  import VueJsonPretty from 'vue-json-pretty'
   require('codemirror/addon/lint/lint.css')
   require('codemirror/addon/lint/lint.js')
   require('codemirror/mode/javascript/javascript.js')
@@ -20,7 +19,7 @@
   export default {
     name: 'Editor',
     components: {
-      VueJsonPretty
+
     },
     data () {
       return {
@@ -108,5 +107,27 @@
 
   .tree-view-item-value-string {
     white-space: pre-wrap !important;
+  }
+
+  .tree-view-item-key-with-chevron {
+    color: #B5B2BD;
+  }
+
+  .tree-view-item-key {
+    color: #777180;
+  }
+
+  .tree-view-item-hint,
+  .tree-view-item-value-string {
+    color: #B9B5C3 !important;
+  }
+
+  .CodeMirror-lint-tooltip {
+    background: #211E29 !important;
+    color: #FFF;
+    padding: 10px;
+    border: 0;
+    border-left: 5px solid lighten(#211E29, 20%);
+    border-radius: 0;
   }
 </style>
