@@ -1,12 +1,17 @@
 $font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-size: 13px;
 
-$base-color: #000;
+$base-color: #FFF;
+$accent-color: #9A82FF;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  background: #23202C;
 }
 
 body {
@@ -51,18 +56,17 @@ img {
 
   &__link {
     display: block;
-    max-width: 40px;
+    max-width: 50px;
     position: relative;
 
     &:after {
       position: absolute;
-      right: -35px;
+      right: -37px;
       top: 0;
       content: "Beta";
-      font-size: 11px;
-      opacity: 0.5;
+      font-size: 9px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       color: $base-color;
       font-weight: 700;
     }
@@ -75,11 +79,10 @@ img {
   justify-content: center;
   padding: 20px;
   max-width: 150px;
-  background: yellow;
   text-decoration: none;
   border-radius: 100px;
-  background-image: linear-gradient(-135deg, #01AAF2 0%, #1087BA 100%);
-  color: #1087BA;
+  background-image: linear-gradient(120deg, $accent-color, #03A4E8);
+  color: $accent-color;
   font-size: 14px;
   letter-spacing: 0.8px;
   position: relative;
@@ -95,12 +98,12 @@ img {
     border-radius: 100px;
     width: calc(100% - 4px);
     height: calc(100% - 4px);
-    background: #fff;
+    background: #23202C;
     content: "";
   }
 
   &:hover {
-    box-shadow: 0 0 35px 0px lighten(#1087BA, 43%);
+    box-shadow: 0 0 35px 0px rgba($accent-color, 0.4);
   }
 
   > * {
@@ -109,20 +112,59 @@ img {
   }
 
   path {
-    fill: #1087BA;
+    fill: $accent-color;
   }
 
   span {
     margin-left: 10px;
+  }
+
+  &--small {
+    display: inline-block;
+    font-size: 12px;
+    padding: 10px 15px;
+    max-width: 140px;
+    margin-left: 10px;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    span {
+      margin-left: 0;
+    }
   }
 }
 
 .footer {
   padding: 40px 0;
   font-size: 14px;
+  position: relative;
+
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 35px;
+  }
 
   a {
     text-decoration: none;
     color: $base-color;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-image: linear-gradient(120deg, $accent-color, #03A4E8);
+      content: "";
+    }
   }
 }
