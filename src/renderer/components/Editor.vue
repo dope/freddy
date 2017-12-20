@@ -11,19 +11,17 @@
 </template>
 
 <script>
+  require('codemirror/mode/javascript/javascript.js')
   require('codemirror/addon/lint/lint.css')
   require('codemirror/addon/lint/lint.js')
-  require('codemirror/mode/javascript/javascript.js')
   require('codemirror/addon/lint/json-lint.js')
+  require('codemirror/theme/duotone-dark.css')
 
   export default {
     name: 'Editor',
-    components: {
-
-    },
     data () {
       return {
-        prettify: '',
+        prettify: '{\n\t\n}',
         value: '',
         viewOptions: {
           maxDepth: 1,
@@ -94,10 +92,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  // Overrides
   .CodeMirror {
     height: 100vh;
     padding: 10px;
     padding-top: 35px;
+    font-size: 13px;
   }
 
   .tree-view-item {
