@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App'
-import CmComponent from 'vue-codemirror/src/codemirror.vue'
 import TreeView from 'vue-json-tree-view'
-
+import CmComponent from 'vue-codemirror-lite/codemirror.vue'
 Vue.component('codemirror', CmComponent)
+
 Vue.use(TreeView)
 
 Vue.config.productionTip = false
