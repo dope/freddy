@@ -2,6 +2,8 @@
 
 > Make your JSON more readable
 
+![alt text](https://dope.github.io/freddy/freddy.jpg "JSON Preview")
+
 #### Build Setup
 
 ``` bash
