@@ -1,4 +1,4 @@
-$font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font: "Space Mono";
 $font-size: 13px;
 
 $base-color: #FFF;
@@ -26,7 +26,7 @@ h1 {
   line-height: 1.4;
   @media screen and (min-width: 40em) {
     font-size: 30px;
-    max-width: 650px;
+    max-width: 680px;
     line-height: 1.4;
   }
 }
@@ -150,21 +150,13 @@ img {
     bottom: 0;
     margin: auto;
     height: 35px;
+    color: $base-color;
   }
 
-  a {
-    text-decoration: none;
-    color: $base-color;
-    position: relative;
-
-    &:before {
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-image: linear-gradient(120deg, $accent-color, #03A4E8);
-      content: "";
-    }
+  &__link {
+    background-image: linear-gradient(120deg, $accent-color, #03A4E8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
   }
 }
