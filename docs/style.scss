@@ -52,6 +52,7 @@ img {
 }
 
 .header {
+  position: relative;
   padding: 70px 0;
 
   &__link {
@@ -70,6 +71,19 @@ img {
       color: $base-color;
       font-weight: 700;
     }
+  }
+  
+  .btn {
+    color: $base-color;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 35px;
+    padding-bottom: 28px;
   }
 }
 
@@ -141,18 +155,9 @@ img {
   padding: 40px 0;
   font-size: 14px;
   position: relative;
+  text-align: center;
 
-  .btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    height: 35px;
-    color: $base-color;
-  }
-
+  
   &__link {
     background-image: linear-gradient(120deg, $accent-color, #03A4E8);
     -webkit-background-clip: text;
